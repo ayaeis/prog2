@@ -7,11 +7,17 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("HelloWorld");
-            Console.WriteLine("What is your name?");
-            string Name = Console.ReadLine();
-            Console.WriteLine("Write your age");
-            int age = Convert.ToInt32(Console.ReadLine());
-
+            string[] names = new string[5];
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.WriteLine("Please write a name. Number: " + i++);
+                names[i] = Console.ReadLine();
+            }
+            Console.WriteLine("The names will now be printed");
+            foreach(string i in names)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
