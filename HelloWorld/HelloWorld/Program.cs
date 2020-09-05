@@ -8,9 +8,9 @@ namespace HelloWorld
         {
             Console.WriteLine("HelloWorld");
             Console.WriteLine("What is your name?");
-            string Name = Console.ReadLine;
+            string Name = Console.ReadLine();
             Console.WriteLine("Write your age");
-            int age = Convert.ToInt32(Console.ReadLine);
+            int age = Convert.ToInt32(Console.ReadLine());
 
         }
     }
