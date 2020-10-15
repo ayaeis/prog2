@@ -25,11 +25,27 @@ namespace OOP
             }
             while (shopping == true)
             {
-                var produkt = new Produkt();
-                Console.WriteLine("Write your  wanted item");
-                produkt._produktTyp = Console.ReadLine();
+                Console.WriteLine("Do you want 1. Food or 2. Drink or 3. Candy");
+                var choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)
+                {
+                    Console.WriteLine("What food do you want?");
+                    var food = new Mat() { _matTyp = Console.ReadLine() };
+                    kund._shoppingCart.Add(food);
+                }
+                else if (choice == 2)
+                {
+                    Console.WriteLine("which drink do you want");
+                    var drink = new Drycka() { _dryckTyp = Console.ReadLine() };
+                    kund._shoppingCart.Add(drink);
 
-                kund._shoppingCart.Add(produkt);
+                }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Which candy do you want");
+                    var candy = new Godis() { _godisTyp = Console.ReadLine() };
+                    kund._shoppingCart.Add(candy);
+                }
                 Console.WriteLine("do you want to add another item?");
                 string answer2 = Console.ReadLine();
                 if ( answer2 == "yes")

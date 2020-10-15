@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OOP
 {
-    class Produkt
+    class Drycka : Produkt
     {
-        public string _produktID;
+        public string _dryckTyp;
     }
 }
